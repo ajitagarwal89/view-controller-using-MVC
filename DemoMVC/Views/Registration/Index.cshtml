@@ -1,4 +1,6 @@
-﻿@model DemoMVC.Models.RegistrationModel
+﻿@using DemoMVC.Models
+
+@model IEnumerable<RegistrationModel>
 
 @{
     ViewBag.Title = "Index";
@@ -29,7 +31,10 @@
   </thead>
   <tbody>
     <tr>
-      <td>@Model.p.FirstName </td>
+    @foreach (var x in Model as List<PersonalInfoModel>) {
+        <td> x.FirstName </td>
+    }
+      @*<td>@Model.f </td>
       <td>@Model.p.LastName  </td>
       <td>@Model.p.Gender </td>
       <td>@Model.p.Marriage </td>
@@ -44,7 +49,7 @@
       <td>@Model.e.HigherEducation</td>
       <td>@Model.e.PassingYear </td>
       <td>@Model.o.companyName </td>
-      <td>@Model.o.DOJ</td>    </tr>
+      <td>@Model.o.DOJ</td>    </tr>*@
   </tbody>
 </table>
 

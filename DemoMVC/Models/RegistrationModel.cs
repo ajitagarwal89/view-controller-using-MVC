@@ -8,12 +8,10 @@ using System.ComponentModel.DataAnnotations;
 namespace DemoMVC.Models
 {
     public class RegistrationModel
-
     {
-        public AddressModel a;
+        public AddressModel a { get; set; }
         public OtherInfoModel o;
         public EducationModel e;
-        public PersonalInfoModel p;
-
+        public List<PersonalInfoModel> p { set; get; }
     }
 }

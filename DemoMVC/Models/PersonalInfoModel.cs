@@ -14,8 +14,8 @@ namespace DemoMVC.Models
         public int Age { get; set; }
         public string phone { get; set; }
        public string Email { get; set; }
-        
-             
+
+        public PersonalInfoModel() { this.FirstName = FirstName; } 
         
     }
 }

@@ -12,6 +12,6 @@ namespace DemoMVC.Models
         public string State { get; set; }
         public string City { get; set; }
         public string ZipCode { get; set; }
-        public virtual ICollection<RegistrationModel> Registration { get; set; }
+        //public virtual ICollection<RegistrationModel> Registration { get; set; }
     }
 }

@@ -4,38 +4,38 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DemoMVC.Models;
-
 namespace DemoMVC.Controllers
 {
     public class RegistrationController : Controller
     {
         // GET: Registration
-        public ActionResult Index()
-        {
-            
-            var ad= new List<AddressModel>();
-            var reg = new RegistrationModel(ad);
-            ad.Address = "gandu";
-            //var x = AddressModel();
-            //reg.p.FirstName = "Ajit";
+        public ActionResult Index()       {
+
+            List<RegistrationModel> reg = new List<RegistrationModel>
+            {
+                new RegistrationModel()
+                {
+                    p = new List<PersonalInfoModel>
+                    { new PersonalInfoModel()
+                    { FirstName = " Ajit", LastName = "kumar" } }
+                } };
+            //RegistrationModel reg = new RegistrationModel();
+            //reg.p.FirstName = "AJIT";
             //reg.p.LastName = "Agarwal";
             //reg.p.Gender = "Male";
             //reg.p.Marriage = "singal";
             //reg.p.Age = 28;
             //reg.p.phone = "7063666250";
             //reg.p.Email = "ajitagarwal20100@gmail.com";
-            //reg.GetType. = "72/Akhil Mistry Lane";
-            reg.a.Country = "INDIA";
-            reg.a.State = "West Bengal";
-            reg.a.City = "Kolkata";
-            reg.a.ZipCode = "700009";
+            //reg.a.Address = "72/Akhil Mistry Lane";
+            //reg.a.Country = "INDIA";
+            //reg.a.State = "West Bengal";
+            //reg.a.City = "Kolkata";
+            //reg.a.ZipCode = "700009";
             //reg.e.HigherEducation = "MCA";
             //reg.e.PassingYear = "2014";
-            //reg.o.companyName="Swastik infotech Services";
+            //reg.o.companyName = "Swastik infotech Services";
             //reg.o.DOJ = "2015";
-           
-
-
             return View(reg);
         }
 

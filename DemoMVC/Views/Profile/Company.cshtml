@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Company";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Company Details </h2>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Url</th>
+      </tr>
+  <tbody>
+    <tr>
+      <td>
+        @Model.ID</td>
+      <td>
+        @Model.Name      
+      </td>
+      <td>
+        Model.Url
+      </td>
+    </tr>
+  </tbody>
+</table>
+

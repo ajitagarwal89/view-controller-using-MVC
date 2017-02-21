@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Coutry</h2>
+<table border="1">
+  <tr>
+    <th>
+      Country Name
+    </th>
+    <th>
+      State
+    </th>
+  </tr>
+  @foreach (string objCountry in ViewBag.coutries)
+
+  {
+      <tr>
+        <td>
+          @objCountry
+        </td>
+
+      </tr>
+       }
+ 
+</table>
+

@@ -17,7 +17,13 @@ namespace DemoMVC
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+                            );
+            routes.MapRoute(
+               name: "test",
+               url: "{controller}/{action}/{id}/{name}",
+               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional, name = UrlParameter.Optional }
+                           );
+
         }
     }
 }

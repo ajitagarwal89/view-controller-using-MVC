@@ -1,0 +1,25 @@
+﻿@*@model IEnumerable<DemoMVC.Models.BookModel>
+ @model BookModel*@
+@using DemoMVC.Models
+@model BookModel
+@{
+    ViewBag.Title = "DisplaayBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Book</h2>
+@{
+    if (Session["BookIDetilal"] != null)
+    {
+      BookModel bm = (BookModel)Session["BookIDetilal"];
+        <p>
+         <b>BookId:</b>@bm.ID</p>
+        <p><b>Book Name:</b> @bm.Title</p>
+        <p><b>Book Price :</b>@bm.Price </p>
+        <p><b>Book Authore:</b>@bm.Author</p>
+    }
+    else {
+    <p style="background-color:red">
+  <b  >No Book Available !!!!</b></p>}
+}
+

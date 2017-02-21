@@ -1,0 +1,50 @@
+﻿@model DemoMVC.Models.RegistrationModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registartion Details</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <td>FirstName</td>
+      <td>LastName</td>
+      <td>Gender</td>
+      <td>Marriage</td>
+      <td>Age</td>
+      <td>phone</td>
+      <td>Email</td>
+      <td>Address</td>
+      <td>Country</td>
+      <td>State</td>
+      <td>City</td>
+      <td>ZipCode</td>
+      <td>HigherEducation</td>
+      <td>PassingYear</td>
+      <td>companyName</td>
+      <td>DOJ</td>
+       </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>@Model.p.FirstName </td>
+      <td>@Model.p.LastName  </td>
+      <td>@Model.p.Gender </td>
+      <td>@Model.p.Marriage </td>
+      <td>@Model.p.Age </td>
+      <td>@Model.p.phone </td>
+      <td>@Model.p.Email </td>
+      <td>@Model.a.Address</td>
+      <td>@Model.a.Country</td><td>
+      <td>@Model.a.State</td>
+      <td>@Model.a.City</td>
+      <td>@Model.a.ZipCode</td>
+      <td>@Model.e.HigherEducation</td>
+      <td>@Model.e.PassingYear </td>
+      <td>@Model.o.companyName </td>
+      <td>@Model.o.DOJ</td>    </tr>
+  </tbody>
+</table>
+

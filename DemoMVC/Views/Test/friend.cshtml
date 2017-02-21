@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>friend List</title>
+</head>
+<body>
+    <div> 
+      @{ ViewBag.Title = "Friend List";}
+      
+      <h2>Friends List</h2>
+      <table border="1">
+        <tr>
+          <th>Sl No.</th>
+          <th>
+            Name
+          </th>
+        </tr>
+        @{ int counter = 0;}
+        @foreach (string frnd in (List<string>)ViewData["friends"])
+        { counter++;
+        <tr>
+        <td>@counter</td>
+        <td>@frnd</td></tr>}
+      </table>
+    </div>
+</body>
+</html>

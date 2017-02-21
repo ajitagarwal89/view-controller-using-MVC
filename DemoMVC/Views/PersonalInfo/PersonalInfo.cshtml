@@ -1,0 +1,55 @@
+﻿@model IEnumerable<DemoMVC.Models.PersonalInfoModel>
+@{
+    ViewBag.Title = "PersonalInfo";
+    ViewBag.Title = "AddressModel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PersonalInfo</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>FirstName</th>
+      <th>
+        LastName
+      </th>
+      <th>
+        Gender
+      </th>
+      <th>Marriage</th>
+      <th>
+        Age
+      </th>
+      <th>phone</th>
+      <th>
+        Email
+      </th>
+    </tr>
+     
+  </thead>
+  <tbody>
+    @foreach (var item in Model )
+    {
+        <tr>
+          <td>
+            @item.FirstName
+          </td>
+          <td>@item.LastName </td>
+          <td>
+            @item.Gender </td>
+          <td>
+            @item.Marriage 
+          </td>
+          <td>@item.Age</td>
+          <td>
+            @item.phone 
+          </td>
+          <td>
+            @item.Email 
+          </td>
+
+        </tr>
+    }
+  </tbody>
+</table>
+

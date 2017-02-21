@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title>DataRender</title>
+</head>
+<body>
+  <div>
+    @{
+        int x = 123;
+        if (x % 2 == 0)
+        {
+            <h5>@x is Even Number</h5>
+        }
+        else
+        {<h2>@x is odd number</h2> }
+    }
+  </div>
+</body>
+</html>
